@@ -1,0 +1,13 @@
+--- Text Query Results ---
+Image Path: COCO_train2014_000000146030.jpg, Similarity Score: 0.3026
+Image Path: COCO_train2014_000000359519.jpg, Similarity Score: 0.3007
+Image Path: COCO_train2014_000000097311.jpg, Similarity Score: 0.2985
+Image Path: COCO_train2014_000000401681.jpg, Similarity Score: 0.2959
+Image Path: COCO_train2014_000000299647.jpg, Similarity Score: 0.2924
+
+--- Combined Query Results ---
+Image Path: COCO_train2014_000000327068.jpg, Similarity Score: 0.3906
+Image Path: COCO_train2014_000000108240.jpg, Similarity Score: 0.3814
+Image Path: COCO_train2014_000000112865.jpg, Similarity Score: 0.3814
+Image Path: COCO_train2014_000000070285.jpg, Similarity Score: 0.3790
+Image Path: COCO_train2014_000000382339.jpg, Similarity Score: 0.3783

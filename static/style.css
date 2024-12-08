@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+form {
+    margin: 20px auto;
+    display: inline-block;
+    text-align: left;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+img {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
