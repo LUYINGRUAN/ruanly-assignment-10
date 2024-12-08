@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Image Search</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="image_query">Image Query:</label>
+        <input type="file" name="image_query" id="image_query"><br><br>
+
+        <label for="image_query_pca">Use Top K Principal Components</label>
+        <select name="image_query_pca" id="image_query_pca">
+            <option value="">---</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        <br>
+
+        <label for="text_query">Text Query:</label>
+        <input type="text" name="text_query" id="text_query" placeholder="Enter text query"><br><br>
+
+        <label for="lam">Hybrid Query Weight (λ):</label>
+        <input type="number" name="lam" id="lam" min="0.0" max="1.0" step="0.1" value="0.8"><br><br>
+
+        <label for="query_type">Select Query Type:</label>
+        <select name="query_type" id="query_type">
+            <option value="Text query">Text Query</option>
+            <option value="Image query">Image Query</option>
+            <option value="Hybrid query">Hybrid Query</option>
+        </select><br><br>
+
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        <h2>Top Search Results</h2>
+        <ul>
+            {% for result in results %}
+                <li>
+                    <img src="/static/coco_images_resized/{{ result[0] }}" alt="Result Image" width="200">
+                    <p>Similarity Score: {{ result[1] }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+        
+    {% else %}
+        {% if request.method == 'POST' %}
+            <p>No results found. Please try again with different inputs.</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
